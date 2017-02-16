@@ -60,7 +60,7 @@ ADD htaccess /config/.htaccess
 WORKDIR /home/pypiserver
 
 # Always starts with the .htaccess
-ENTRYPOINT ["/usr/local/bin/pypi-server", "-P", "/config/.htaccess"]
+ENTRYPOINT ["/usr/local/bin/pypi-server", "-P", "/config/.htaccess", "-a", "update,download"]
 
 # Hack : add a CMD with default value to enable passing other options
 CMD ["-p", "8080"]
